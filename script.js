@@ -12,24 +12,32 @@ let dineroEfectivo = 0
 
 daviviendaHTML.addEventListener("input", function(){
     dineroDavivienda = parseFloat(daviviendaHTML.value) || 0;
-    sumaTotal()
+    SumaTengo()
+    DineroLibre()
+    DineroSemanal();
 })
 
 nequiHTML.addEventListener("input", function(){
     dineroNequi = parseFloat(nequiHTML.value) || 0;
-    sumaTotal()
+    SumaTengo()
+    DineroLibre()
+    DineroSemanal();
 })
 
 efectivoHTML.addEventListener("input", function(){
     dineroEfectivo = parseFloat(efectivoHTML.value) || 0;
-    sumaTotal()
+    SumaTengo()
+    DineroLibre()
+    DineroSemanal();
 })
 
-function sumaTotal(){
+function SumaTengo(){
     const total = dineroDavivienda + dineroNequi + dineroEfectivo;
     console.log(total)
 
     totalTengoHTML.textContent = `Tienes ${total}`
+
+    return total;
 }
 
 // DEBO LOGICA
@@ -45,26 +53,56 @@ let deudaPrestamo = 0;
 
 deboBancoHTML.addEventListener("input", function(){
     deudaBanco = parseFloat(deboBancoHTML.value) || 0;
-    sumaDeuda();
+    SumaDeuda();
+    DineroLibre();
+    DineroSemanal();
 })
 
 deboTarjetaHTML.addEventListener("input", function(){
     deudaTarjeta = parseFloat(deboTarjetaHTML.value) || 0;
-    sumaDeuda();
+    SumaDeuda();
+    DineroLibre();
+    DineroSemanal();
 })
 
 deboPrestamoHTML.addEventListener("input", function(){
     deudaPrestamo = parseFloat(deboPrestamoHTML.value) || 0;
-    sumaDeuda();
+    SumaDeuda();
+    DineroLibre();
+    DineroSemanal();
 })
 
-function sumaDeuda(){
+function SumaDeuda(){
     const total = deudaBanco + deudaTarjeta + deudaPrestamo;
     totalDeudaHTML.textContent = `Debo pagar ${total}`
+    return total;
 }
 
 
+// TOTAL DINERO LIBRE
 
-// CALCULO FINAL LOGICA
 const dineroLibreHTML = document.getElementById("dinero-libre");
-const dineroSemanalHTML = document.getElementById()
+
+
+function DineroLibre(){
+    const totalDebo = SumaDeuda();
+    const totalTengo = SumaTengo();
+
+    let totalDineroLibre =  totalTengo - totalDebo;
+    dineroLibreHTML.textContent = `Puedo gastar ${totalDineroLibre}`
+
+    return totalDineroLibre;
+}
+
+
+// SEMANALMENTE DINERO LIBRE
+
+const dineroSemanalHTML = document.getElementById("dinero-semanal");
+
+function DineroSemanal(){
+    let totalDineroSemanal = DineroLibre() / 4
+
+    dineroSemanalHTML.textContent = `Cada semana puedes gastar ${totalDineroSemanal}`;
+}
+
+

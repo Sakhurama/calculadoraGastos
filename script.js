@@ -32,6 +32,7 @@ efectivoHTML.addEventListener("input", function(){
     DineroSemanal();
 })
 
+// Suma el total de dinero disponible en Davivienda, Nequi y Efectivo
 function SumaTengo(){
     totalTengo = dineroDavivienda + dineroNequi + dineroEfectivo;
     console.log(totalTengo)
@@ -74,6 +75,7 @@ deboPrestamoHTML.addEventListener("input", function(){
     DineroSemanal();
 })
 
+// Suma el total de deudas entre tarjeta, banco y prestamo.
 function SumaDeuda(){
     totalDeuda = deudaBanco + deudaTarjeta + deudaPrestamo;
     totalDeudaHTML.textContent = `Debo pagar ${totalDeuda}`
@@ -86,6 +88,7 @@ function SumaDeuda(){
 const dineroLibreHTML = document.getElementById("dinero-libre");
 let totalDineroLibre = 0;
 
+// Resta las deudas al total de dinero disponible.
 function DineroLibre(){
     totalDineroLibre =  totalTengo - totalDeuda;
     dineroLibreHTML.textContent = `Puedo gastar ${totalDineroLibre}`
@@ -98,6 +101,7 @@ function DineroLibre(){
 
 const dineroSemanalHTML = document.getElementById("dinero-semanal");
 
+// Divide el dinero disponible luego de pagar deudas en 4 (semanas).
 function DineroSemanal(){
     let totalDineroSemanal = totalDineroLibre / 4
 

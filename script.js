@@ -8,6 +8,7 @@ const totalTengoHTML = document.getElementById("total-tengo");
 let dineroDavivienda = 0
 let dineroNequi = 0
 let dineroEfectivo = 0
+let totalTengo = 0
 
 
 daviviendaHTML.addEventListener("input", function(){
@@ -32,12 +33,12 @@ efectivoHTML.addEventListener("input", function(){
 })
 
 function SumaTengo(){
-    const total = dineroDavivienda + dineroNequi + dineroEfectivo;
-    console.log(total)
+    totalTengo = dineroDavivienda + dineroNequi + dineroEfectivo;
+    console.log(totalTengo)
 
-    totalTengoHTML.textContent = `Tienes ${total}`
+    totalTengoHTML.textContent = `Tienes ${totalTengo}`
 
-    return total;
+    return totalTengo;
 }
 
 // DEBO LOGICA
@@ -50,6 +51,7 @@ const totalDeudaHTML = document.getElementById("total-debo");
 let deudaBanco = 0;
 let deudaTarjeta = 0;
 let deudaPrestamo = 0;
+let totalDeuda = 0
 
 deboBancoHTML.addEventListener("input", function(){
     deudaBanco = parseFloat(deboBancoHTML.value) || 0;
@@ -73,22 +75,19 @@ deboPrestamoHTML.addEventListener("input", function(){
 })
 
 function SumaDeuda(){
-    const total = deudaBanco + deudaTarjeta + deudaPrestamo;
-    totalDeudaHTML.textContent = `Debo pagar ${total}`
-    return total;
+    totalDeuda = deudaBanco + deudaTarjeta + deudaPrestamo;
+    totalDeudaHTML.textContent = `Debo pagar ${totalDeuda}`
+    return totalDeuda;
 }
 
 
 // TOTAL DINERO LIBRE
 
 const dineroLibreHTML = document.getElementById("dinero-libre");
-
+let totalDineroLibre = 0;
 
 function DineroLibre(){
-    const totalDebo = SumaDeuda();
-    const totalTengo = SumaTengo();
-
-    let totalDineroLibre =  totalTengo - totalDebo;
+    totalDineroLibre =  totalTengo - totalDeuda;
     dineroLibreHTML.textContent = `Puedo gastar ${totalDineroLibre}`
 
     return totalDineroLibre;
@@ -100,7 +99,7 @@ function DineroLibre(){
 const dineroSemanalHTML = document.getElementById("dinero-semanal");
 
 function DineroSemanal(){
-    let totalDineroSemanal = DineroLibre() / 4
+    let totalDineroSemanal = totalDineroLibre / 4
 
     dineroSemanalHTML.textContent = `Cada semana puedes gastar ${totalDineroSemanal}`;
 }

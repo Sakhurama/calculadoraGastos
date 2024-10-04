@@ -1,3 +1,4 @@
+
 // TENGO LOGICA
 
 const daviviendaHTML = document.getElementById("davivienda");
@@ -42,6 +43,9 @@ function SumaTengo(){
     return totalTengo;
 }
 
+
+
+// -----------
 // DEBO LOGICA
 
 const deboBancoHTML = document.getElementById("banco");
@@ -83,12 +87,14 @@ function SumaDeuda(){
 }
 
 
+
+// ------------------
 // TOTAL DINERO LIBRE
 
 const dineroLibreHTML = document.getElementById("dinero-libre");
 let totalDineroLibre = 0;
 
-// Resta las deudas al total de dinero disponible.
+// Resta el total que tengo menos el total que debo.
 function DineroLibre(){
     totalDineroLibre =  totalTengo - totalDeuda;
     dineroLibreHTML.textContent = `Puedo gastar ${totalDineroLibre}`
@@ -97,6 +103,8 @@ function DineroLibre(){
 }
 
 
+
+// -------------------------
 // SEMANALMENTE DINERO LIBRE
 
 const dineroSemanalHTML = document.getElementById("dinero-semanal");

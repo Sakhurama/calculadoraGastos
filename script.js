@@ -1,3 +1,5 @@
+// TENGO LOGICA
+
 const daviviendaHTML = document.getElementById("davivienda");
 const nequiHTML = document.getElementById("nequi");
 const efectivoHTML = document.getElementById("efectivo");
@@ -30,3 +32,39 @@ function sumaTotal(){
     totalTengoHTML.textContent = `Tienes ${total}`
 }
 
+// DEBO LOGICA
+
+const deboBancoHTML = document.getElementById("banco");
+const deboTarjetaHTML = document.getElementById("tarjeta");
+const deboPrestamoHTML = document.getElementById("prestamo");
+const totalDeudaHTML = document.getElementById("total-debo");
+
+let deudaBanco = 0;
+let deudaTarjeta = 0;
+let deudaPrestamo = 0;
+
+deboBancoHTML.addEventListener("input", function(){
+    deudaBanco = parseFloat(deboBancoHTML.value) || 0;
+    sumaDeuda();
+})
+
+deboTarjetaHTML.addEventListener("input", function(){
+    deudaTarjeta = parseFloat(deboTarjetaHTML.value) || 0;
+    sumaDeuda();
+})
+
+deboPrestamoHTML.addEventListener("input", function(){
+    deudaPrestamo = parseFloat(deboPrestamoHTML.value) || 0;
+    sumaDeuda();
+})
+
+function sumaDeuda(){
+    const total = deudaBanco + deudaTarjeta + deudaPrestamo;
+    totalDeudaHTML.textContent = `Debo pagar ${total}`
+}
+
+
+
+// CALCULO FINAL LOGICA
+const dineroLibreHTML = document.getElementById("dinero-libre");
+const dineroSemanalHTML = document.getElementById()

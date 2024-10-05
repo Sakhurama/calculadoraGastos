@@ -7,53 +7,54 @@
     <title>Document</title>
 </head>
 <body>
-    <div>
-        <h2>Tengo:</h2>
+    <div class="container">
+        <div class="card-tengo">
+            <h2>Tengo:</h2>
 
-        <div>
-            <label for="davivienda">Davivienda:</label>
-            <input type="number" id="davivienda">
-        </div>
-        <div>
-            <label for="nequi">Nequi:</label>
-            <input type="number" id="nequi">
-        </div>
-        <div>
-            <label for="efectivo">Efectivo:</label>
-            <input type="number" id="efectivo">
+            <div>
+                <label for="davivienda">Davivienda:</label>
+                <input type="number" id="davivienda">
+            </div>
+            <div>
+                <label for="nequi">Nequi:</label>
+                <input type="number" id="nequi">
+            </div>
+            <div>
+                <label for="efectivo">Efectivo:</label>
+                <input type="number" id="efectivo">
+            </div>
+
+            <div>
+                <p>Total: <span id="total-tengo"></span></p>
+            </div>
         </div>
 
-        <div>
-            <p>Total: <span id="total-tengo"></span></p>
+        <div class="card-debo">
+            <h2>Debo:</h2>
+
+            <div>
+                <label for="banco">Banco:</label>
+                <input type="number" id="banco">
+            </div>
+            <div>
+                <label for="tarjeta">Tarjeta:</label>
+                <input type="number" id="tarjeta">
+            </div>
+            <div>
+                <label for="prestamo">Prestamo:</label>
+                <input type="number" id="prestamo">
+            </div>
+
+            <div>
+                <p>Deuda total: <span id="total-debo"></span></p>
+            </div>
+        </div>
+
+        <div class="card-libre">
+            <p class="dinero-libre">Dinero libre: <span id="dinero-libre"></span></p>
+            <p class="dinero-semanal">Semanal: <span id="dinero-semanal"></span></p>
         </div>
     </div>
-
-    <div>
-        <h2>Debo:</h2>
-
-        <div>
-            <label for="banco">Banco:</label>
-            <input type="number" id="banco">
-        </div>
-        <div></div>
-            <label for="tarjeta">Tarjeta:</label>
-            <input type="number" id="tarjeta">
-        </div>
-        <div>
-            <label for="prestamo">Prestamo:</label>
-            <input type="number" id="prestamo">
-        </div>
-
-        <div></div>
-            <p>Deuda total: <span id="total-debo"></span></p>
-        </div>
-    </div>
-
-    <div>
-        <p>Dinero libre: <span id="dinero-libre"></span></p>
-        <p>Semanal: <span id="dinero-semanal"></span></p>
-    </div>
-
     <script src="script.js"></script>
 </body>
 </html>

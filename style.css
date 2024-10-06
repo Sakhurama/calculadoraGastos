@@ -1,4 +1,5 @@
 * {
+    font-family: "Poppins", sans-serif;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -6,11 +7,21 @@
 
 .container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 10px;
     background-color: rgb(37, 0, 62);
     height: 100vh;
+    width: 100vw;
+}
+
+.container-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    gap: 10px;
 }
 
 .card-tengo{
@@ -61,4 +72,15 @@
     padding: 20px;
     width: 100%;
     border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    .card-tengo, .card-debo, .card-libre {
+        width: 300px;
+    }
 }

@@ -24,28 +24,20 @@
     gap: 10px;
 }
 
-.card-tengo{
+.card-tengo, .card-debo{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 10px;
-    background-color: white;
+    padding: 5px;
+    background-color: rgb(159, 255, 231);
     width: 400px;
-    height: 200px;
+    height: 330px;
     border-radius: 10px;
 }
 
 .card-debo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    background-color: rgb(164, 164, 164);
-    width: 400px;
-    height: 200px;
-    border-radius: 10px;
+    background-color: rgb(255, 159, 159);
 }
 
 .card-libre{
@@ -60,27 +52,70 @@
     border-radius: 10px;
 }
 
-.dinero-libre{
-    background-color: green;
-    padding: 20px;
-    width: 100%;
-    border-radius: 10px;
+h2 {
+    font-size: 2rem;
+    text-align: center;
+    color: white;
 }
 
-.dinero-semanal{
-    background-color: greenyellow;
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.inputs input {
+    width: 300px;
+    padding: 5px 10px;
+    font-size: 16px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+
+.totales-card {
+    margin-top: 20px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    width: 250px;
+}
+
+.dinero-libre, .dinero-semanal {
+    color: white;
+    background-color: rgb(0, 139, 0);
     padding: 20px;
     width: 100%;
     border-radius: 10px;
+    font-weight: 600;
+}
+
+.dinero-semanal {
+    background-color: rgb(0, 61, 0);
 }
 
 @media (max-width: 600px) {
     .container {
+        padding: 35px 20px;
+        height: max-content;
         flex-direction: column;
-        overflow: hidden;
     }
 
     .card-tengo, .card-debo, .card-libre {
         width: 300px;
+        margin-top: 20px;
+    }
+
+    .inputs input {
+        width: 250px;
+        padding: 5px 10px;
+        font-size: 16px;
+    }
+
+    .card-libre {
+        
     }
 }

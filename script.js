@@ -117,7 +117,7 @@ function DineroLibre() {
     value: totalDineroLibre,
   });
 
-  dineroLibreHTML.textContent = `Puedo gastar ${formatearValor}`;
+  dineroLibreHTML.textContent = `${formatearValor}`;
 
   return totalDineroLibre;
 }

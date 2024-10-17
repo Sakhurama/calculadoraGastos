@@ -96,6 +96,7 @@ input[type=number]::-webkit-outer-spin-button {
     width: 400px;
     height: 200px;
     border-radius: 10px;
+    margin-top: 25px;
 }
 
 .dinero-libre, .dinero-semanal {
@@ -116,6 +117,11 @@ input[type=number]::-webkit-outer-spin-button {
     font-size: 1.5rem;
 }
 
+#semanas {
+    padding: 6px 25px;
+    border-radius: 5px;
+    font-size: 16px;
+}
 /* 
 ---------------
 ESTILOS MOBILE

@@ -14,11 +14,20 @@ const daviviendaHTML = document.getElementById("davivienda");
 const nequiHTML = document.getElementById("nequi");
 const efectivoHTML = document.getElementById("efectivo");
 const totalTengoHTML = document.getElementById("total-tengo");
+const semanasHTML = document.getElementById("semanas");
 
 let dineroDavivienda = 0;
 let dineroNequi = 0;
 let dineroEfectivo = 0;
 let totalTengo = 0;
+let semanas = 4;
+
+semanasHTML.addEventListener("change", function(){
+  semanas = semanasHTML.value || 4
+  SumaTengo();
+  DineroLibre();
+  DineroSemanal();
+})
 
 daviviendaHTML.addEventListener("input", function () {
   dineroDavivienda = parseFloat(daviviendaHTML.value) || 0;
@@ -129,7 +138,7 @@ const dineroSemanalHTML = document.getElementById("dinero-semanal");
 
 // Divide el dinero disponible luego de pagar deudas en 4 (semanas).
 function DineroSemanal() {
-  let totalDineroSemanal = totalDineroLibre / 4;
+  let totalDineroSemanal = totalDineroLibre / semanas;
 
     const formatearValor = currencyFormatter({
         currency: "USD",

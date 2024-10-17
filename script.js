@@ -114,6 +114,7 @@ function SumaDeuda() {
 // ------------------
 // TOTAL DINERO LIBRE
 
+const cardDineroLibre = document.querySelector(".dinero-libre"); // Lo llamo con querySelector en vez de ID solo para probar querySelector, es mejor llamarlo por ID
 const dineroLibreHTML = document.getElementById("dinero-libre");
 let totalDineroLibre = 0;
 
@@ -127,6 +128,12 @@ function DineroLibre() {
   });
 
   dineroLibreHTML.textContent = `${formatearValor}`;
+
+  if (totalDineroLibre >= 0) {
+    cardDineroLibre.style.backgroundColor = "rgb(0, 139, 0)"; // Verde para valores positivos o cero
+  } else {
+    cardDineroLibre.style.backgroundColor = "rgb(255, 0, 0)"; // Rojo para valores negativos
+  }
 
   return totalDineroLibre;
 }

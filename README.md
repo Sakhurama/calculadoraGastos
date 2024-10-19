@@ -18,7 +18,8 @@ mientras soluciono un problema de mi vida cotidiana.
 - Usar un HTML más semántico, evitar usar tantos div y usar section, main, footer...
 - DRY - Dont Repeat Yourself
 
-<br/>
+<br>
+
 ## ¡Echale un vistazo!
 Así se veía el problema que tenía, aunque me funcionaba bien desde una computadora, en el celular era imposible hacer el control de mis gastos.
 Existen aplicaciones que hacen esto pero te bombardean con anuncios o son muy complejas. Yo solamente quería un control de gastos básico, rápido y fácil de usar.

@@ -20,4 +20,4 @@ mientras soluciono un problema de mi vida cotidiana.
 
 ### Proyecto
 ### Vista Excel
-![Pantallazo Excel Desktop](img/excel.png)
+![Pantallazo Excel Desktop](img/readme/excel.png)

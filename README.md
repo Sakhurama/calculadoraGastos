@@ -18,6 +18,32 @@ mientras soluciono un problema de mi vida cotidiana.
 - Usar un HTML más semántico, evitar usar tantos div y usar section, main, footer...
 - DRY - Dont Repeat Yourself
 
-### Proyecto
+## ¡Echale un vistazo!
+Así se veía el problema que tenía, aunque me funcionaba bien desde una computadora, en el celular era imposible hacer el control de mis gastos.
+Existen aplicaciones que hacen esto pero te bombardean con anuncios o son muy complejas. Yo solamente quería un control de gastos básico, rápido y fácil de usar.
+
 ### Vista Excel
+**Vista Desktop**
 ![Pantallazo Excel Desktop](img/readme/excel.png)
+
+**Vista Mobile**
+![Pantallazo Excel Mobile](img/readme/excel2.png)
+
+### Calculadora de Gastos
+- Me permite hacer la división de mi dinero disponible por las semanas faltantes del mes.
+- En vista mobile hay una burbuja flotante que me muestra el dinero disponible en cada momento.
+
+**Vista Desktop**
+![Pantallazo Calculadora Desktop](img/readme/calculadora.png)
+
+**Vista Mobile**
+![Pantallazo Calculadora Mobile](img/readme/calculadora1.png)
+![Pantallazo Calculadora Mobile](img/readme/calculadora2.png)
+
+
+### ¿Qué sigue?
+Esto no acaba acá aún tengo algunas ideas y nuevos features para este proyectito tan divertido y útil.
+
+- Cuando dinero puedo gastar al día según mi dinero disponible.
+- Agregar campos con nombre propio, tal vez alguien no usa Davivienda sino Bancolombia.
+- ...

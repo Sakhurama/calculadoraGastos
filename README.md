@@ -2,6 +2,9 @@
 > Mira este proyecto: <a href="https://sakhurama.github.io/calculadoraGastos/">HAZ CLIC AQUÍ</a>
 
 ## Calculadora de Gastos
+[![Calculadora de Gastos](img/readme/calculadora.png)](https://sakhurama.github.io/calculadoraGastos/)
+<br>
+
 Antes de este proyecto llevaba mi control de gastos en Excel, pero esto tenía un problema,
 no podía hacer las cuentas desde mi celular ya que la vista del documento era confusa e ilegible.
 
